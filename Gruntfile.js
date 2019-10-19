@@ -1,11 +1,25 @@
-﻿module.exports = function (grunt) {
+/// <binding BeforeBuild='all' />
+module.exports = function (grunt) {
     grunt.initConfig({
+        clean: ["wwwroot/lib/*"],
         copy: {
             main: {
                 expand: true,
                 cwd: 'node_modules/admin-lte/dist',
                 src: '**',
                 dest: 'wwwroot/'
+            },
+            jqueryval: {
+                expand: true,
+                cwd: 'node_modules/jquery-validation',
+                src: '**',
+                dest: 'wwwroot/lib/jquery-validation/'
+            },
+            jqueryvalunob: {
+                expand: true,
+                cwd: 'node_modules/jquery-validation-unobtrusive/dist',
+                src: '**',
+                dest: 'wwwroot/lib/jquery-validation-unobtrusive/'
             },
             components: {
                 expand: true,
@@ -15,6 +29,8 @@
             }
         },
     });
-    //grunt.loadNpmTasks("grunt-contrib-clean");
+    grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-copy");
+
+    grunt.registerTask("all", ['clean', 'copy']);
 };
