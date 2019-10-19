@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='all' />
+/// <binding BeforeBuild='all' ProjectOpened='all' />
 module.exports = function (grunt) {
     grunt.initConfig({
         clean: ["wwwroot/lib/*"],

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AdminLTE2.Web.Pages
+namespace AdminLTE.RazorPages.Pages.UI
 {
-    public class ndexModel : PageModel
+    public class ButtonsModel : PageModel
     {
         public void OnGet()
         {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AdminLTE2.Web.Pages
 {
-    public class ndexModel : PageModel
+    public class IndexModel : PageModel
     {
         public void OnGet()
         {
