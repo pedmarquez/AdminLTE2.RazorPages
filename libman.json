@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "admin-lte@2.4.18",
+      "destination": "wwwroot/lib/admin-lte/"
+    },
+    {
+      "library": "twitter-bootstrap@3.4.1",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "jquery@3.4.1",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "font-awesome@4.7.0",
+      "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "ionicons@2.0.1",
+      "destination": "wwwroot/lib/ionicons/"
+    },
+    {
+      "library": "fastclick@1.0.6",
+      "destination": "wwwroot/lib/fastclick/"
+    },
+    {
+      "library": "jQuery-slimScroll@1.3.8",
+      "destination": "wwwroot/lib/jQuery-slimScroll/"
+    },
+    {
+      "library": "iCheck@1.0.2",
+      "destination": "wwwroot/lib/iCheck/"
+    },
+    {
+      "library": "wysihtml5@0.3.0",
+      "destination": "wwwroot/lib/wysihtml5/"
+    },
+    {
+      "library": "fullcalendar@3.10.1",
+      "destination": "wwwroot/lib/fullcalendar/"
+    },
+    {
+      "library": "moment.js@2.24.0",
+      "destination": "wwwroot/lib/moment.js/"
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/lib/jqueryui/"
+    }
+  ]
+}
