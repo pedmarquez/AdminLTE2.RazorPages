@@ -14,10 +14,10 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="~/lib/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
-    <environment include="Development">
-        <link rel="stylesheet" href="~/css/AdminLTE.min.css">
-        @RenderSection("styles", required: false)
-    </environment>
+
+    <link rel="stylesheet" href="~/css/AdminLTE.min.css">
+    @RenderSection("styles", required: false)
+
 
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
@@ -39,7 +39,7 @@
         <!-- =============================================== -->
         <!-- Left side column. contains the sidebar -->
         <partial name="_SidebarPartial" />
-        
+
         <!-- =============================================== -->
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -237,7 +237,7 @@
         </aside>
         <!-- /.control-sidebar -->
         <!-- Add the sidebar's background. This div must be placed
-     immediately after the control sidebar -->
+        immediately after the control sidebar -->
         <div class="control-sidebar-bg"></div>
     </div>
     <!-- ./wrapper -->
