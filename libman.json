@@ -34,10 +34,7 @@
       "library": "iCheck@1.0.2",
       "destination": "wwwroot/lib/iCheck/"
     },
-    {
-      "library": "wysihtml5@0.3.0",
-      "destination": "wwwroot/lib/wysihtml5/"
-    },
+  
     {
       "library": "fullcalendar@3.10.1",
       "destination": "wwwroot/lib/fullcalendar/"
@@ -49,6 +46,10 @@
     {
       "library": "jqueryui@1.12.1",
       "destination": "wwwroot/lib/jqueryui/"
+    },
+    {
+      "library": "bootstrap3-wysiwyg@0.3.3",
+      "destination": "wwwroot/lib/bootstrap3-wysiwyg/"
     }
   ]
 }
