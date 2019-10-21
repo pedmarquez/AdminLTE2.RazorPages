@@ -10,6 +10,6 @@ https://adminlte-razorpages.azurewebsites.net/
 -npm install -g grunt-cli
 
 ## Run
--npm install
--grunt
--dotnet run
+- npm install
+- grunt
+- dotnet run
