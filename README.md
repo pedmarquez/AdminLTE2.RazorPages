@@ -5,11 +5,11 @@ ASP.NET Core Razor Pages version of the original AdminLTE dashboard https://admi
 ## Demo
 https://adminlte-razorpages.azurewebsites.net/
 
-##Prerequisites
+## Prerequisites
 -node
 -npm install -g grunt-cli
 
-##Run
+## Run
 -npm install
 -grunt
 -dotnet run
