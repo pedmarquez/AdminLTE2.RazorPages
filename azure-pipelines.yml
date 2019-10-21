@@ -23,7 +23,7 @@ steps:
     verbose: false
 - task: Grunt@0
   inputs:
-    gruntFile: 'gruntfile.js'
+    gruntFile: 'Gruntfile.js'
     targets: 
     gruntCli: 'node_modules/grunt-cli/bin/grunt'
 - task: NuGetCommand@2
