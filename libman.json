@@ -34,7 +34,6 @@
       "library": "iCheck@1.0.2",
       "destination": "wwwroot/lib/iCheck/"
     },
-  
     {
       "library": "fullcalendar@3.10.1",
       "destination": "wwwroot/lib/fullcalendar/"
@@ -50,6 +49,36 @@
     {
       "library": "bootstrap3-wysiwyg@0.3.3",
       "destination": "wwwroot/lib/bootstrap3-wysiwyg/"
+    },
+    {
+      "library": "jvectormap@2.0.4",
+      "destination": "wwwroot/lib/jvectormap/"
+    },
+    {
+      "library": "raphael@2.3.0",
+      "destination": "wwwroot/lib/raphael/"
+    },
+    {
+      "library": "morris.js@0.5.1",
+      "destination": "wwwroot/lib/morris.js/"
+    },
+    {
+      "library": "bootstrap-daterangepicker@3.0.5",
+      "destination": "wwwroot/lib/bootstrap-daterangepicker/"
+    },
+    {
+      "library": "jQuery-Knob@1.2.13",
+      "destination": "wwwroot/lib/jQuery-Knob/"
     }
-  ]
+  ,
+{
+  "library": "jquery-sparklines@2.1.2",
+  "destination": "wwwroot/lib/jquery-sparklines/"
+}
+,
+{
+  "library": "bootstrap-datepicker@1.9.0",
+  "destination": "wwwroot/lib/bootstrap-datepicker/"
+}
+]
 }
