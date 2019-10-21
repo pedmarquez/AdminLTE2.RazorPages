@@ -17,16 +17,8 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
 
-- task: Npm@1
-  displayName: 'Run npm install'
-  inputs:
-    verbose: false
 
-- task: Grunt@0
-  inputs:
-    gruntFile: 'Gruntfile.js'
-    targets: 
-    gruntCli: 'node_modules/grunt-cli/bin/grunt'
+
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
