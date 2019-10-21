@@ -6,8 +6,8 @@ ASP.NET Core Razor Pages version of the original AdminLTE dashboard https://admi
 https://adminlte-razorpages.azurewebsites.net/
 
 ## Prerequisites
--node
--npm install -g grunt-cli
+- node
+- npm install -g grunt-cli
 
 ## Run
 - npm install
