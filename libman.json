@@ -69,16 +69,47 @@
     {
       "library": "jQuery-Knob@1.2.13",
       "destination": "wwwroot/lib/jQuery-Knob/"
-    }
-  ,
-{
-  "library": "jquery-sparklines@2.1.2",
-  "destination": "wwwroot/lib/jquery-sparklines/"
-}
-,
-{
-  "library": "bootstrap-datepicker@1.9.0",
-  "destination": "wwwroot/lib/bootstrap-datepicker/"
-}
-]
+    },
+    {
+      "library": "jquery-sparklines@2.1.2",
+      "destination": "wwwroot/lib/jquery-sparklines/"
+    },
+    {
+      "library": "bootstrap-datepicker@1.9.0",
+      "destination": "wwwroot/lib/bootstrap-datepicker/"
+    },
+    {
+      "library": "datatables@1.10.19",
+      "destination": "wwwroot/lib/datatables/"
+    },
+    {
+      "library": "select2@4.0.10",
+      "destination": "wwwroot/lib/select2/"
+    },
+    {
+      "library": "inputmask@4.0.9",
+      "destination": "wwwroot/lib/inputmask/"
+    },
+    {
+      "library": "bootstrap-colorpicker@2.5.3",
+      "destination": "wwwroot/lib/bootstrap-colorpicker/"
+    },
+    {
+      "library": "bootstrap-timepicker@0.5.2",
+      "destination": "wwwroot/lib/bootstrap-timepicker/"
+    },
+    {
+      "library": "Chart.js@1.1.1",
+      "destination": "wwwroot/lib/Chart.js/"
+    },
+    {
+      "library": "flot@0.8.3",
+      "destination": "wwwroot/lib/flot/"
+    },
+    {
+      "library": "pace@1.0.2",
+      "destination": "wwwroot/lib/pace/"
+    },
+  
+  ]
 }

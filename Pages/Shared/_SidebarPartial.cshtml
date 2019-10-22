@@ -1,4 +1,11 @@
-﻿<aside class="main-sidebar">
+﻿@functions{
+    string IsActivePage(string page)
+    {
+        var pageActual = Context.Request.RouteValues["page"].ToString();
+        return pageActual.ToLower().Contains(page.ToLower()) ? "active" : null;
+    }
+}
+<aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <!-- Sidebar user panel -->
@@ -38,7 +45,7 @@
                     <li><a asp-page="/index2"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+            <li class="treeview @IsActivePage("Layout")">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>Layout Options</span>
@@ -47,21 +54,21 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                    <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                    <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                    <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+                    <li class="@IsActivePage("Topnav")"><a asp-page="/Layout/Topnav"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+                    <li class="@IsActivePage("Boxed")"><a asp-page="/Layout/Boxed"><i class="fa fa-circle-o"></i> Boxed</a></li>
+                    <li class="@IsActivePage("Fixed")"><a asp-page="/Layout/Fixed"><i class="fa fa-circle-o"></i> Fixed</a></li>
+                    <li class="@IsActivePage("Collapsed")"><a  asp-page="/Layout/CollapsedSidebar"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
                 </ul>
             </li>
-            <li>
-                <a asp-page="/widgets">
+            <li class="@IsActivePage("Widgets")">
+                <a asp-page="/Widgets">
                     <i class="fa fa-th"></i> <span>Widgets</span>
                     <span class="pull-right-container">
                         <small class="label pull-right bg-green">Hot</small>
                     </span>
                 </a>
             </li>
-            <li class="treeview">
+            <li class="treeview @IsActivePage("Charts")">
                 <a href="#">
                     <i class="fa fa-pie-chart"></i>
                     <span>Charts</span>
@@ -70,13 +77,13 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                    <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-                    <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                    <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+                    <li class="@IsActivePage("ChartJs")"><a asp-page="/Charts/ChartJs"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+                    <li class="@IsActivePage("Morris")"><a asp-page="/Charts/Morris"><i class="fa fa-circle-o"></i> Morris</a></li>
+                    <li class="@IsActivePage("Flot")"><a asp-page="/Charts/Flot"><i class="fa fa-circle-o"></i> Flot</a></li>
+                    <li class="@IsActivePage("Inline")"><a asp-page="/Charts/Inline"><i class="fa fa-circle-o"></i> Inline charts</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+            <li class="treeview @IsActivePage("UI")">
                 <a href="#">
                     <i class="fa fa-laptop"></i>
                     <span>UI Elements</span>
@@ -85,15 +92,15 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a asp-page="/UI/General"><i class="fa fa-circle-o"></i> General</a></li>
-                    <li><a asp-page="/UI/Icons"><i class="fa fa-circle-o"></i> Icons</a></li>
-                    <li><a asp-page="/UI/Buttons"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                    <li><a asp-page="/UI/Sliders"><i class="fa fa-circle-o"></i> Sliders</a></li>
-                    <li><a asp-page="/UI/Timeline"><i class="fa fa-circle-o"></i> Timeline</a></li>
-                    <li><a asp-page="/UI/Modals"><i class="fa fa-circle-o"></i> Modals</a></li>
+                    <li class="@IsActivePage("General")"><a asp-page="/UI/General"><i class="fa fa-circle-o"></i> General</a></li>
+                    <li class="@IsActivePage("Icons")"><a asp-page="/UI/Icons"><i class="fa fa-circle-o"></i> Icons</a></li>
+                    <li class="@IsActivePage("Buttons")"><a asp-page="/UI/Buttons"><i class="fa fa-circle-o"></i> Buttons</a></li>
+                    <li class="@IsActivePage("Sliders")"><a asp-page="/UI/Sliders"><i class="fa fa-circle-o"></i> Sliders</a></li>
+                    <li class="@IsActivePage("Timeline")"><a asp-page="/UI/Timeline"><i class="fa fa-circle-o"></i> Timeline</a></li>
+                    <li class="@IsActivePage("Modals")"><a asp-page="/UI/Modals"><i class="fa fa-circle-o"></i> Modals</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+            <li class="treeview @IsActivePage("Forms")">
                 <a href="#">
                     <i class="fa fa-edit"></i> <span>Forms</span>
                     <span class="pull-right-container">
@@ -101,12 +108,12 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a asp-page="/Forms/General"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                    <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                    <li class="@IsActivePage("General")"><a asp-page="/Forms/General"><i class="fa fa-circle-o"></i> General Elements</a></li>
+                    <li class="@IsActivePage("Advanced")"><a asp-page="/Forms/Advanced"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
                     <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+            <li class="treeview @IsActivePage("Tables")">
                 <a href="#">
                     <i class="fa fa-table"></i> <span>Tables</span>
                     <span class="pull-right-container">
@@ -114,11 +121,11 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a  asp-page="/Tables/Simple"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                    <li><a href="../tables/data"><i class="fa fa-circle-o"></i> Data tables</a></li>
+                    <li class="@IsActivePage("Simple")"><a asp-page="/Tables/Simple"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+                    <li class="@IsActivePage("Data")"><a asp-page="/Tables/Data"><i class="fa fa-circle-o"></i> Data tables</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="@IsActivePage("Calendar")">
                 <a asp-page="/Calendar">
                     <i class="fa fa-calendar"></i> <span>Calendar</span>
                     <span class="pull-right-container">
@@ -127,8 +134,8 @@
                     </span>
                 </a>
             </li>
-            <li>
-                <a  asp-page="/Mailbox/Mailbox">
+            <li class="@IsActivePage("Mailbox")">
+                <a asp-page="/Mailbox/Mailbox">
                     <i class="fa fa-envelope"></i> <span>Mailbox</span>
                     <span class="pull-right-container">
                         <small class="label pull-right bg-yellow">12</small>
@@ -137,7 +144,7 @@
                     </span>
                 </a>
             </li>
-            <li class="treeview active">
+            <li class="treeview @IsActivePage("Examples")">
                 <a href="#">
                     <i class="fa fa-folder"></i> <span>Examples</span>
                     <span class="pull-right-container">
@@ -145,15 +152,15 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a asp-page="/Examples/Invoice"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                    <li><a asp-page="/Examples/Profile"><i class="fa fa-circle-o"></i> Profile</a></li>
+                    <li class="@IsActivePage("Invoice")"><a asp-page="/Examples/Invoice"><i class="fa fa-circle-o"></i> Invoice</a></li>
+                    <li class="@IsActivePage("Profile")"><a asp-page="/Examples/Profile"><i class="fa fa-circle-o"></i> Profile</a></li>
                     <li><a href="login.html"><i class="fa fa-circle-o"></i> Login</a></li>
                     <li><a href="register.html"><i class="fa fa-circle-o"></i> Register</a></li>
                     <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                    <li><a href="404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                    <li><a href="500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                    <li class="active"><a asp-page="/pages/examples/blank"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                    <li><a href="pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+                    <li class="@IsActivePage("Error404")"><a asp-page="/Examples/Error404"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                    <li class="@IsActivePage("Error500")"><a asp-page="/Examples/Error500"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                    <li class="@IsActivePage("Blank")"><a asp-page="/examples/blank"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+                    <li class="@IsActivePage("Pace")"><a asp-page="/Examples/Pace"><i class="fa fa-circle-o"></i> Pace Page</a></li>
                 </ul>
             </li>
             <li class="treeview">
