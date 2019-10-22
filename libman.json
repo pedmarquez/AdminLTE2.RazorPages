@@ -110,6 +110,9 @@
       "library": "pace@1.0.2",
       "destination": "wwwroot/lib/pace/"
     },
-  
+    {
+      "library": "bootstrap-slider@10.6.2",
+      "destination": "wwwroot/lib/bootstrap-slider/"
+    }
   ]
 }
