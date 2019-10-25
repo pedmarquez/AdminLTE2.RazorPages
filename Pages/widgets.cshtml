@@ -1,60 +1,24 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Widgets";
 }
 
 <div class="row">
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-envelope-o"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Messages</span>
-                <span class="info-box-number">1,410</span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
+        @await Component.InvokeAsync("InfoBox", new { Icon = "envelope-o", BackgroundIcon = "aqua", Text = "Messages", Number = "1,410" })
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="fa fa-flag-o"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Bookmarks</span>
-                <span class="info-box-number">410</span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
+        @await Component.InvokeAsync("InfoBox", new { Icon = "flag-o", BackgroundIcon = "green", Text = "Bookmarks", Number = "410" })
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="fa fa-files-o"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Uploads</span>
-                <span class="info-box-number">13,648</span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
+        @await Component.InvokeAsync("InfoBox", new { Icon = "files-o", BackgroundIcon = "yellow", Text = "Uploads", Number = "13,648" })
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Likes</span>
-                <span class="info-box-number">93,139</span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
+        @await Component.InvokeAsync("InfoBox", new { Icon = "star-o", BackgroundIcon = "red", Text = "Likes", Number = "93,139" })
     </div>
     <!-- /.col -->
 </div>
@@ -63,83 +27,35 @@
 
 <div class="row">
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-aqua">
-            <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Bookmarks</span>
-                <span class="info-box-number">41,410</span>
-
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                </div>
-                <span class="progress-description">
-                    70% Increase in 30 Days
-                </span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
+        @await Component.InvokeAsync("InfoBox", new { Icon = "bookmark-o", BackgroundBox = "aqua", Text = "Bookmarks", Number = "41,410", ProgressValue = 70, ProgressDescription = " 70% Increase in 30 Days" })
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-green">
-            <span class="info-box-icon"><i class="fa fa-thumbs-o-up"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Likes</span>
-                <span class="info-box-number">41,410</span>
-
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                </div>
-                <span class="progress-description">
-                    70% Increase in 30 Days
-                </span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
+        @await Component.InvokeAsync("InfoBox", new { Icon = "thumbs-o-up", BackgroundBox = "green", Text = "Likes", Number = "41,410", ProgressValue = 70, ProgressDescription = " 70% Increase in 30 Days" })
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-yellow">
-            <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
+        <vc:info-box background-box="yellow"
+                     background-icon=""
+                     icon="calendar"
+                     text="Events"
+                     number="41,410"
+                     progress-value="70"
+                     progress-description="70% Increase in 30 Days">
+        </vc:info-box>
 
-            <div class="info-box-content">
-                <span class="info-box-text">Events</span>
-                <span class="info-box-number">41,410</span>
-
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                </div>
-                <span class="progress-description">
-                    70% Increase in 30 Days
-                </span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="info-box bg-red">
-            <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
-
-            <div class="info-box-content">
-                <span class="info-box-text">Comments</span>
-                <span class="info-box-number">41,410</span>
-
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                </div>
-                <span class="progress-description">
-                    70% Increase in 30 Days
-                </span>
-            </div>
-            <!-- /.info-box-content -->
-        </div>
-        <!-- /.info-box -->
+        <vc:info-box background-box="red"
+                     background-icon=""
+                     icon="comments-o"
+                     text="Comments"
+                     number="41,410"
+                     progress-value="70"
+                     progress-description="70% Increase in 30 Days">
+        </vc:info-box>
+       
     </div>
     <!-- /.col -->
 </div>

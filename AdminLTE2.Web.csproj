@@ -10,6 +10,7 @@
 
 
   <ItemGroup>
+    <Folder Include="TagHelpers\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 

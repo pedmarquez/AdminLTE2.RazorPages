@@ -1,0 +1,22 @@
+﻿@model InfoBoxModel
+<div class="info-box @(!string.IsNullOrWhiteSpace(Model.BackgroundBox)? $"bg-{Model.BackgroundBox}":null)">
+    <span class="info-box-icon @(!string.IsNullOrWhiteSpace(Model.BackgroundIcon)? $"bg-{Model.BackgroundIcon}":null)"><i class="fa fa-@Model.Icon"></i></span>
+
+    <div class="info-box-content">
+        <span class="info-box-text">@Model.Text</span>
+        <span class="info-box-number">@Model.Number</span>
+
+        @if (Model.ProgressValue.HasValue)
+        {
+            <div class="progress">
+                <div class="progress-bar" style="width: @Model.ProgressValue.Value%"></div>
+            </div>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.ProgressDescription))
+        {
+            <span class="progress-description">
+                @Model.ProgressDescription
+            </span>
+        }
+    </div>
+</div>
