@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AdminLTE2.Web.Pages.Tables
 {
     public class DataModel : PageModel
     {
+     
         public void OnGet()
         {
 
