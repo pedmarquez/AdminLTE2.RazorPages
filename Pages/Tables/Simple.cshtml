@@ -15,12 +15,9 @@
 
 <div class="row">
     <div class="col-md-6">
-        <div class="box">
-            <div class="box-header with-border">
-                <h3 class="box-title">Bordered Table</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
+        <box>
+            <box-header with-border="true" title="Bordered Table"></box-header>
+            <box-body>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -44,14 +41,14 @@
                                 <td><span class="badge @item.BadgeCss">@item.Progress%</span></td>
                             </tr>
                         }
-                      
+
                     </tbody>
 
-                   
+
                 </table>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
+            </box-body>
+            
+            <box-footer>
                 <ul class="pagination pagination-sm no-margin pull-right">
                     <li><a href="#">&laquo;</a></li>
                     <li><a href="#">1</a></li>
@@ -59,9 +56,9 @@
                     <li><a href="#">3</a></li>
                     <li><a href="#">&raquo;</a></li>
                 </ul>
-            </div>
-        </div>
-        <!-- /.box -->
+            </box-footer>
+        </box>
+        
 
         <div class="box">
             <div class="box-header">
@@ -78,7 +75,7 @@
                             <th style="width: 40px">Label</th>
                         </tr>
                     </thead>
-                  
+
                     <tbody>
                         @foreach (var item in Model.TasksData)
                         {
@@ -94,7 +91,7 @@
                             </tr>
                         }
                     </tbody>
-                   
+
                 </table>
             </div>
             <!-- /.box-body -->

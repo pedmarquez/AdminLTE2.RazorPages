@@ -83,7 +83,7 @@
       "destination": "wwwroot/lib/datatables/"
     },
     {
-      "library": "select2@4.0.10",
+      "library": "select2@4.0.12",
       "destination": "wwwroot/lib/select2/"
     },
     {
